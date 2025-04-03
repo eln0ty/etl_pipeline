@@ -1,7 +1,7 @@
 
 **Online Retail ETL Pipeline**
 
-**This project is an ETL (Extract, Transform, Load) pipeline designed to process online retail data, clean it, transform it, and load it into a data warehouse (DWH) for analysis. The pipeline handles large datasets, such as the provided **online_retail.csv**, and includes scripts for data cleaning, partitioning, indexing, and metadata design.**
+This project is an ETL (Extract, Transform, Load) pipeline designed to process online retail data, clean it, transform it, and load it into a data warehouse (DWH) for analysis. The pipeline handles large datasets, such as the provided **online_retail.csv**, and includes scripts for data cleaning, partitioning, indexing, and metadata design.
 
 **Project Overview**
 
@@ -12,44 +12,7 @@
 3. **Load**: Loads the processed data into a data warehouse with scripts like **ETLProcessor.py**, including partitioning and indexing for efficient querying.
 4. **Metadata Design**: Generates metadata for the data warehouse using **DWH_Metadata.py**.
 
-**The pipeline is containerized using Docker for easy deployment and scalability.**
-
-**Directory Structure**
-
-```text
-Retail ETLProcessor/
-│
-├── analysis/
-│   └── debug.csv.ipynb        # Jupyter notebook for debugging and analysis
-│
-├── data-archive/
-│   ├── 20250402_142100_online_retail.csv  # Sample raw retail data
-│
-├── data-src/
-│   ├── online_retail.csv      # Source retail data
-│
-├── DWH-Design/
-│   ├── dwh_design.png         # Data warehouse design diagram
-│   └── metadata_design.png    # Metadata design diagram
-│
-├── infra/
-│   └── docker-compose.yml     # Docker Compose configuration for containerization
-│
-├── processing/                # Core ETL scripts
-│   ├── CleanData.py           # Script for cleaning raw data
-│   ├── config.py              # Configuration settings for the pipeline
-│   ├── DButils.py             # Database utility functions
-│   ├── DWH_Design.py          # Script for designing the data warehouse
-│   ├── DWH_Metadata.py        # Script for generating DWH metadata
-│   ├── DWH_PartitioningIndexing.py  # Script for partitioning and indexing the DWH
-│   ├── ETLProcessor.py        # Main ETL processing script
-│   ├── main.py                # Entry point for running the pipeline
-│   ├── TRANSFORMUtils.py      # Utility functions for data transformation
-│   └── URLutils.py            # Utility functions for handling URLs
-│
-├── README.md                  # Project documentation (this file)
-└── requirements.txt           # Python dependencies
-```
+The pipeline is containerized using Docker for easy deployment and scalability.
 
 **Prerequisites**
 
