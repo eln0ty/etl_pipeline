@@ -1,0 +1,49 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: eln0ty
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: pg-db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - app_network
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: eln0ty@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+    networks:
+      - app_network
+
+  jupyter:
+    image: jupyter/base-notebook:latest
+    container_name: jupyter_notebook
+    environment:
+      JUPYTER_TOKEN: password
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/home/jovyan/work
+    depends_on:
+      - postgres
+    networks:
+      - app_network
+
+# Volumes and Networks
+volumes:
+  postgres_data:
+
+networks:
+  app_network:
+    driver: bridge
