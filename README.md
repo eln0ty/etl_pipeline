@@ -1,10 +1,8 @@
 
 **Online Retail ETL Pipeline**
-
 This project is an ETL (Extract, Transform, Load) pipeline designed to process online retail data, clean it, transform it, and load it into a data warehouse (DWH) for analysis. The pipeline handles large datasets, such as the provided **online_retail.csv**, and includes scripts for data cleaning, partitioning, indexing, and metadata design.
 
 **Project Overview**
-
 **The Online Retail ETL Pipeline processes raw retail data, performing the following steps:**
 
 1. **Extract**: Reads raw data from CSV files (e.g., **online_retail.csv**).
@@ -63,7 +61,6 @@ The pipeline is containerized using Docker for easy deployment and scalability.
    Check the diagrams in **DWH-Design/** for the data warehouse and metadata design.
 
 **Scripts Overview**
-
 * **CleanData.py**: Cleans raw data by handling missing values, duplicates, and inconsistencies.
 * **TRANSFORMUtils.py**: Contains utility functions for data transformation (e.g., normalization, encoding).
 * **ETLProcessor.py**: Orchestrates the ETL process, from extraction to loading.
@@ -73,13 +70,3 @@ The pipeline is containerized using Docker for easy deployment and scalability.
 * **DButils.py**: Provides database connection and query utilities.
 * **URLutils.py**: Handles URL-related operations (if applicable).
 * **main.py**: Entry point to run the entire pipeline.
-
-
-
-**Contributions are welcome! Please follow these steps:**
-
-1. **Fork the repository.**
-2. **Create a new branch (**git checkout -b your-feature**).**
-3. **Commit your changes (**git commit -m "Add your feature"**).**
-4. **Push to the branch (**git push origin your-feature**).**
-5. **Open a pull request.**
