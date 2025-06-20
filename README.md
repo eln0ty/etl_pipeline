@@ -1,5 +1,6 @@
 
 **Online Retail ETL Pipeline**
+
 This project is an ETL (Extract, Transform, Load) pipeline designed to process online retail data, clean it, transform it, and load it into a data warehouse (DWH) for analysis. The pipeline handles large datasets, such as the provided **online_retail.csv**, and includes scripts for data cleaning, partitioning, indexing, and metadata design.
 
 **Project Overview**
